@@ -32,6 +32,7 @@ function updateStatus(index:number){
     taskNode=patch(taskNode,tasks(values));
 }
 
+
 function deleteTask(index:number){
     values.splice(index,1);
     taskNode=patch(taskNode,tasks(values));
