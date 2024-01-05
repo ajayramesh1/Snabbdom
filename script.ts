@@ -22,16 +22,13 @@ function updateValue(){
         title:inputValue,
         status:Status.todo
     });
-    console.log(values)
     taskNode=patch(taskNode,tasks(values));
 }
 
 function updateStatus(index:number){
     values[index].status = values[index].status ===  Status.completed ?  Status.todo : Status.completed;
-    console.log(values);
     taskNode=patch(taskNode,tasks(values));
 }
-
 
 function deleteTask(index:number){
     values.splice(index,1);
